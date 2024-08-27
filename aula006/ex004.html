@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+
+        }
+    </style>
+</head>
+<body>
+    
+
+
+    <script>
+        nome = window.prompt('Diga seu nome')
+        document.write(`Olá ${nome}! seu nome tem ${nome.length} letras <br>`) //aqui podemos misturar elementos HTLM dentro do comando JS
+        document.write(`<br>Seu nome em maiusculas fica ${nome.toUpperCase()}`)
+        // Mexendo com dinheiro
+
+        dinheiro = window.prompt('Quanto e o seu salario?')
+        window.alert(`Seu salario fica ${dinheiro.replace('.',',')}`)
+        window.alert(`Seu dinheiro em dolar ficaria ${dinheiro.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}`)
+
+        //document.write(`<br> Seu salario fica ${dinheiro.toFixed(2).replace('.', ',')}`)
+        // document.write(`<br> E em dolar ficaria ${dinheiro.toLocalString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+        // nao funciona muito bem em HTML diferente do Terminal
+    </script>
+</body>
+</html>

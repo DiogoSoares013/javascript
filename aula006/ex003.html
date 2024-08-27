@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Código</title>
+    <style>
+        body{
+            background-color: rgb(99, 99, 241);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1{
+            text-shadow: 5px 1px 1px black;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Primeiro Script em JavaScript</h1>
+    <p>Primeiros testes</p>
+
+
+    <script>
+       var n1 = Number.parseInt(window.prompt('Diga um numero')) // String por causa da caracteristica do comando 
+       var n2 = Number.parseInt(window.prompt('Digite outro numero')) 
+       var n3 = Number(window.prompt('Digite mais um numero')) // Usando o Number o sistema interpreta se o numero é Int ou Float
+       var r  = n1 + n2 + n3 // Concatenação, ou seja, vai apenas juntar as duas Strings e não somar elas
+       window.alert(`O resultado dos numeros deu ${r}`)  // Para transformar em String usamos o comando String() 
+       nome = window.prompt('Qual o seu nome?') // usando a crase ` com o ${} podemos colocar as variaveis de forma mais direta
+       nomeM = nome.toUpperCase()
+       nomem = nome.toLowerCase()
+       window.alert(`Legal! seu nome tem ${nome.length} caracteres`)  // .lenght conta os caracteres .toUpperCase() para transformar em maisculas e .to LowerCase() para minusculas
+       window.alert(`E seu nome fica assim ${nomeM} com letras maiusculas!`)
+       window.alert(`E fica ${nomem} minusculo`)
+    </script>
+</body>
+</html>
