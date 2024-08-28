@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(102, 102, 233);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg"> Clique em mim </div>
+
+    <script>
+        // Podemos modificar os elementos usando o Class Name Tag e ID
+
+        // EXEMPLO var d = window.document.getElementsByName('msg')[0]
+        
+        // var d = window.document.getElementById('msg')
+        
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1] // Selecionanto a tag p entre as 2 que existem, o primeiro é 0 
+        // window.document.write('Esta escrito assim: ' + p1.innerHTML)
+
+        var d = window.document.querySelector('div#msg') // especificando de outra forma
+        d.style.background = 'black'
+        
+        //d.style.background = 'black'
+       // d.style.borderRadius = '5px'
+        // d.innerText = 'Olá!'
+        
+        corpo.style.background = ''
+        p1.style.color = ''
+        window.document.write()
+    </script>
+</body>
+</html>
