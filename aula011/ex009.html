@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 09JS</title>
+</head>
+<body>
+    <h1>Diga em que país você mora!</h1>
+    <input type="text" name="nac" id="inac">
+    <input type="button" value="Enviar" onclick="env()">
+    <div id="res">Calculando...</div>
+
+    <script>
+        function env() {
+            txt = window.document.getElementById('inac').value // por algum motivo essa coisa tem q por .value para nao dar problema no inner
+            res = window.document.getElementById('res')
+
+            if (txt.toUpperCase() == 'BRASIL') { // LEMBRAR de usar == para saber se É IGUAL !!!
+                res.innerHTML = `Você mora no ${txt} que legal!!`
+
+            }else {
+                res.innerHTML = 'Voce eh estrangeiro!'
+            }
+        } 
+    </script>
+</body>
+</html>
