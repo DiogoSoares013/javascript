@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Medidas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de medidas</h1>
+    <input type="button" value="Converter" onclick="calcular()">
+
+    <p id="res">Clique no botão acima para iniciar.</p>
+
+    <div id="valores"></div>
+    <script>
+        function calcular() {
+            res = window.document.getElementById('res') // valor dado pelo usuario
+            valores = window.document.getElementById('valores') // valores convertidos 
+            valor = window.prompt('Digite uma distância em metros (m)')
+            v1 = Number(valor)
+            km = v1 / 1000 // fazer um replace dps de . para , 
+            
+            res.innerHTML = `<h2>A distância de ${valor} metros, corresponde a...</h2>`
+            valores.innerHTML = `${km} quilometros (km)`
+        }
+    </script>
+</body>
+</html>
