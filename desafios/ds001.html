@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Mensagem</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio da Mensagem</h1>
+    <input type="button" value="Botao 1" id="um" onclick="clicou()">
+    <input type="button" value="Botao 2" id="dois" onclick="clicou2()">
+    <input type="button" value="Botao 3" id="tres" onclick="clicou3()">
+
+    <script>
+        bt1 = window.document.getElementById('um')
+        bt2 = window.document.getElementById('dois')
+        bt3 = window.document.getElementById('tres')
+
+        function clicou() {
+            window.alert('Voce clicou no Pimeiro botao')
+        }
+        function clicou2() {
+            window.alert('Voce clilcou no Segundo botao')
+
+        }
+        function clicou3() {
+            window.alert('Voce clicou no Terceiro botao')
+        }
+    </script>
+</body>
+</html>
