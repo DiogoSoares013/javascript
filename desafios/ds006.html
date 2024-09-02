@@ -28,8 +28,8 @@
             res = window.document.getElementById('res')
             val = window.document.getElementById('valores')
             tempC = Number(c)
-            f = c * 1.8 + 32
-            k = Number(c + 273) // ta dando alguma coisa errado nessa equacao :/
+            f = (c * 1.8 + 32).toFixed(2)
+            k = Number(c + 273).toFixed(2) // ta dando alguma coisa errado nessa equacao :/
 
             res.innerHTML = `<h2>A temperatura de ${c.replace('.',',')} ºC, corresponde a... </h2>`
             val.innerHTML = `<p> ${f} ºF (Fahrenheit) <br> ${k} ºK (Kelvin) </p>`
