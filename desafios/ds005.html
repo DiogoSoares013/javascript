@@ -11,6 +11,7 @@
         input {
             padding: 10px;
         }
+        
     </style>
 </head>
 <body>
@@ -26,10 +27,17 @@
             valores = window.document.getElementById('valores') // valores convertidos 
             valor = window.prompt('Digite uma distância em metros (m)')
             v1 = Number(valor)
-            km = v1 / 1000 // fazer um replace dps de . para , 
-            
-            res.innerHTML = `<h2>A distância de ${valor} metros, corresponde a...</h2>`
-            valores.innerHTML = `${km} quilometros (km)`
+            km = (v1 / 1000).toFixed(3).replace('.',',')
+            hm = (v1 / 100).toFixed(3).replace('.',',')
+            dam = (v1/10).toFixed(3).replace('.',',')
+            dm = (v1 * 10).toFixed(3).replace('.',',')
+            cm = (v1*100) // tem q arrumar algumas colocacoes de virgula mas fodase
+            mm = (v1*1000).toFixed(3).replace('.',',')
+
+            res.innerHTML = `<h2>A distância de ${valor.replace('.',',')} metros, corresponde a...</h2>`
+            valores.innerHTML = `${km} quilometros (Km) <br> ${hm} hectometros (Hm) <br> ${dam} decametros (Dam)
+            <br> ${dm} decimetros (dm) <br> ${cm} centimetros (cm) <br> ${mm} milimetros (mm)`
+             
         }
     </script>
 </body>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertendo Temperatura</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            padding: 10px;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Temperaturas</h1>
+    <input type="button" value="Converter" onclick="convert()">
+
+    <p id="res">Clique no botao acima para iniciar.</p>
+
+    <div id="valores"></div>
+
+    <script>
+        function convert() {
+            c = window.prompt('Digite uma temperatura em ºC (Celcius)')
+            res = window.document.getElementById('res')
+            val = window.document.getElementById('valores')
+            tempC = Number(c)
+            f = c * 1.8 + 32
+            k = Number(c + 273) // ta dando alguma coisa errado nessa equacao :/
+
+            res.innerHTML = `<h2>A temperatura de ${c.replace('.',',')} ºC, corresponde a... </h2>`
+            val.innerHTML = `<p> ${f} ºF (Fahrenheit) <br> ${k} ºK (Kelvin) </p>`
+
+        }
+    </script>
+</body>
+</html>
