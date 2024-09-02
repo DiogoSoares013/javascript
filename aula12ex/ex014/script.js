@@ -5,7 +5,7 @@ function carregar (){
     
     data = new Date()   // pegando a data do sistema
     hora = data.getHours() // criando a var que vai dar a hora do sistema
-       
+    
     msg.innerHTML = `Agora são ${hora} horas.`
     
 
